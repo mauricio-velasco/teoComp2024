@@ -1,0 +1,88 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+
+\date{}
+
+\begin{document}
+\title{Pr\'actico TEOCOMP: Introducción}
+\author{Mauricio Velasco}
+\maketitle
+\begin{enumerate}
+\item Investigue el algoritmo \emph{BubbleSort} para ordenar una lista de $n$ enteros de manera ascendente.
+\begin{enumerate}
+\item Escriba una descripción en pseudocódigo del algoritmo.
+\item Aplíquelo para ordenar la lista $10,9,8,7,6,5,4,3,2,1$ de manera ascendente, mostrando todos los estadios intermedios de la ejecución.
+\item Demuestre que el algoritmo es correcto.
+\item Demuestre que el número de operaciones es $O(n^2)$.
+\end{enumerate}
+
+\item Considere la siguiente modificación de \emph{MergeSort} dividiendo el input en tres tercios y no en dos mitades.
+\begin{enumerate}
+\item Escriba el pseudocódigo de la función \emph{merge} en este caso y
+\item Estime y demuestre una cota superior para el tiempo de ejecución en un input de longitud $n=3^m$.
+\end{enumerate}
+
+\item Te dan un arreglo de $n$ números distintos donce $n=2^m$ para algun entero $m$. Propón un algoritmo que identifica el segundo número más grande del arreglo usando a lo más $n+\log(n)-2$ comparaciones. Demuestra su validez y verifica formalmente que tiene el número correcto de comparaciones (Sugerencia: Qué información queda después de calcular el número más grande?).
+
+\item Implemente en \verb! python! el algoritmo de Karatsuba para multiplicar enteros y utilícelo para calcular el cuadrado del número entero más pequeño que no se puede representar mediante una variable de tipo \verb!int! en python. Escriba el código de su implementación, explique como encontró el entero y escriba el producto resultante.
+
+\item Ordene las siguientes funciones en orden de tasa de crecimiento creciente demostrando su respuesta (es decir $g(n)$ esta despues de $f(n)$ si $f=O(g(n))$) 
+\begin{enumerate}
+\item $\sqrt{n}$
+\item $10^n$
+\item $n^{1.5}$
+\item $n^{\frac{5}{3}}$
+\item Use \verb! python! para graficar las funciones y estimar los valores $n_0$ para los que las desigualdades que encontró se cumplen. 
+\end{enumerate}
+
+
+\item Ordene las siguientes funciones en orden de tasa de crecimiento creciente demostrando su respuesta (es decir $g(n)$ esta despues de $f(n)$ si $f=O(g(n))$) 
+\begin{enumerate}
+\item $n^2\log_2(n)$
+\item $2^n$
+\item $2^{2^n}$
+\item $n^{\log_2(n)}$
+\item $n^2$
+\end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}
