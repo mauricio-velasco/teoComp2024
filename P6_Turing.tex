@@ -1,0 +1,81 @@
+
+\documentclass[12pt, a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=cyan,
+}
+\urlstyle{same}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\newtheorem{theorem}{Teorema.}
+\newtheorem{lemma}[theorem]{Lema.}
+\newtheorem{corollary}[theorem]{Corolario.}
+\newtheorem{definition}[theorem]{Definici\'on:}
+\newtheorem{example}[theorem]{Ejemplo:}
+\newtheorem{problema}[theorem]{Problema:}
+\newtheorem{remark}[theorem]{Observaci\'on:}
+
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+%\usetheme{default}
+
+\newcommand{\pp}{\mathbb{P}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\usepackage{tikz, tikz-3dplot}
+
+\definecolor{cof}{RGB}{219,144,71}
+\definecolor{pur}{RGB}{186,146,162}
+\definecolor{greeo}{RGB}{91,173,69}
+\definecolor{greet}{RGB}{52,111,72}
+\date{}
+
+
+\begin{document}
+\title{PRÁCTICO : Máquinas de Turing}
+\author{Mauricio Velasco}
+\maketitle{}
+\begin{enumerate}
+\item \begin{enumerate}
+\item Diseñe y escriba una máquina de Turing que escanea hacia la derecha hasta que encuentra dos $a$'s consecutivas y luego se detiene. El alfabeto de la máquina debe ser $\Sigma =\{a,b,\cup,\triangle\}$ y debe dar la descripción de la máquina en completo detalle (como $5$-tupla).
+\item Escriba las configuraciones que ocurren al ejecutar su máquina con input $\cup bbabaa$.
+\end{enumerate}
+
+
+\item Dé un ejemplo de una máquina de Turing sobre el alfabeto $\{a\}$ con un solo halting state $h$ que cumpla:
+\begin{enumerate}
+\item Si la máquina se inicia con la palabra $_aaaaaa\dots a$ donde la $a$ aparece un número par de veces y la cabeza lectora en el vacío inicial entonces la máquina se detiene en estado $h$ con la cabeza en el vacío inicial.
+\item Si la máquina se inicia con la palabra $_aaaaaa\dots a$ donde la $a$ aparece un número \emph{impar} de veces y la cabeza lectora en el vacío inicial entonces la máquina NO se detiene (es decir continua realizando operaciones y movimientos y nunca llega al estado $h$).
+\end{enumerate}
+Demuestre que su máquina cumple las características pedidas.
+
+
+\item Construya una máquina de Turing (usando, si quiere, la notación de máquinas de Turing jerárquicas) que calcule la funcion $f: \{a,b\}^*\rightarrow \{a,b\}^*$ dada por $f(w)=ww^R$ donde $w^R$ significa la palabra reversa a $w$. Muestre la ejecución de la misma en una cadena representativa. (nota: Puede asumir que la cinta inicia con la palabra $_w$ y que la cabeza lectora se encuentra en el vacío inicial).
+
+
+\item Describa una máquina de Turing que semidecida el lenguaje $a^*ba^*b$.
+
+\item Utilice máquinas de Turing no deterministas para demostrar que:
+\begin{enumerate}
+\item La clase de lenguajes recursivos esta cerrada bajo unión, concatenación y estrella de Kleene.
+\item La clase de lenguajes recursivamente enumerables esta cerrada bajo unión, concatenación y estrella de Kleene.
+
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+
+
+
+\end{document}
